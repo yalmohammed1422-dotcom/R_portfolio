@@ -1,77 +1,78 @@
 // ═══════════════════════════════════════════════════════════════
-// 📊  DASHBOARD DATASET  — THIS IS WHERE YOU ADD YOUR DATA
+// 📊  PROJECT DASHBOARDS  — ADD YOUR DATASET FOR EACH PROJECT
 // ═══════════════════════════════════════════════════════════════
 //
-// Edit any of the arrays below to update the dashboard charts.
-// The dashboard will automatically re-render with your new data.
+// Each entry here links to one of your projects.
+// Visitors can view the data and switch between chart types.
+// Only YOU (the owner) add or edit data here.
 //
-// You can also UPLOAD a CSV file directly on the dashboard page —
-// it will auto-generate a bar chart from any numeric CSV column.
+// HOW TO ADD DATA FOR A NEW PROJECT:
+//   1. Copy the template block at the bottom
+//   2. Set `projectName` to match your project title
+//   3. Fill in `metrics` (the 4 stat cards shown above the chart)
+//   4. Fill in `chartData` (the values shown in the chart)
+//   5. Set `dataLabel` — the Y-axis label / tooltip label
+//   6. Choose which chart types make sense: "bar" | "line" | "pie" | "radar"
 
-// ── 1. SKILL LEVELS ─────────────────────────────────────────────
-// Change the `value` (0–100) to reflect your real proficiency.
-// Add or remove skills by editing this array.
-export const skillsData = [
-  { skill: "Python",           value: 90 },
-  { skill: "Machine Learning", value: 85 },
-  { skill: "Deep Learning",    value: 78 },
-  { skill: "Data Analysis",    value: 88 },
-  { skill: "IoT Systems",      value: 84 },
-  { skill: "NLP",              value: 72 },
-  { skill: "Computer Vision",  value: 75 },
-  { skill: "Flask / FastAPI",  value: 80 },
-  { skill: "SQL",              value: 82 },
-  { skill: "Power BI",         value: 76 },
-];
+export const projectDashboards = [
+  {
+    id: 1,
+    projectName: "AI-Powered Customer Support Chatbot",
+    description: "Performance metrics from chatbot evaluation and testing",
+    metrics: [
+      { label: "Intent Accuracy",    value: "94%" },
+      { label: "Avg Response Time",  value: "120ms" },
+      { label: "Languages",          value: "5" },
+      { label: "Resolution Rate",    value: "76%" },
+    ],
+    chartData: [
+      { name: "Intent Detection",   value: 94 },
+      { name: "Sentiment Accuracy", value: 88 },
+      { name: "Resolution Rate",    value: 76 },
+      { name: "User Satisfaction",  value: 91 },
+      { name: "Multi-language",     value: 85 },
+    ],
+    dataLabel: "Score (%)",
+    availableCharts: ["bar", "radar", "pie"],
+  },
+  {
+    id: 2,
+    projectName: "Smart Home Network Design",
+    description: "Network reliability and device integration metrics",
+    metrics: [
+      { label: "IoT Devices",        value: "12" },
+      { label: "Network Uptime",     value: "99%" },
+      { label: "VLANs Configured",   value: "4" },
+      { label: "Security Protocols", value: "3" },
+    ],
+    chartData: [
+      { name: "Smart Lighting", value: 98 },
+      { name: "Security Cams",  value: 95 },
+      { name: "Thermostats",    value: 92 },
+      { name: "Sensors",        value: 97 },
+      { name: "Network Core",   value: 99 },
+    ],
+    dataLabel: "Reliability (%)",
+    availableCharts: ["bar", "radar", "pie"],
+  },
 
-// ── 2. TECH FREQUENCY ────────────────────────────────────────────
-// How often does each technology appear across your projects?
-// One entry per technology. `count` = number of projects it appears in.
-export const techFrequencyData = [
-  { tech: "Python",         count: 6 },
-  { tech: "TensorFlow",     count: 3 },
-  { tech: "Flask",          count: 4 },
-  { tech: "Gemini API",     count: 2 },
-  { tech: "Cisco PT",       count: 2 },
-  { tech: "Power BI",       count: 3 },
-  { tech: "Pandas",         count: 5 },
-  { tech: "Scikit-learn",   count: 4 },
-  { tech: "OpenCV",         count: 2 },
-  { tech: "Matplotlib",     count: 5 },
-];
-
-// ── 3. MONTHLY LEARNING PROGRESS ────────────────────────────────
-// Track learning milestones or GitHub activity over time.
-// `projects` = cumulative projects completed, `courses` = courses done.
-export const progressData = [
-  { month: "Jan 25", projects: 1, courses: 2 },
-  { month: "Feb 25", projects: 2, courses: 3 },
-  { month: "Mar 25", projects: 2, courses: 5 },
-  { month: "Apr 25", projects: 3, courses: 6 },
-  { month: "May 25", projects: 4, courses: 7 },
-  { month: "Jun 25", projects: 4, courses: 9 },
-  { month: "Jul 25", projects: 5, courses: 10 },
-  { month: "Aug 25", projects: 6, courses: 11 },
-  { month: "Sep 25", projects: 7, courses: 13 },
-  { month: "Oct 25", projects: 8, courses: 14 },
-];
-
-// ── 4. DOMAIN RADAR ─────────────────────────────────────────────
-// Five broad domains — used in the radar/spider chart.
-// `A` = your score, `fullMark` should stay at 100.
-export const radarData = [
-  { domain: "AI / ML",         A: 85, fullMark: 100 },
-  { domain: "Data Engineering",A: 80, fullMark: 100 },
-  { domain: "IoT Systems",     A: 84, fullMark: 100 },
-  { domain: "Web / API",       A: 76, fullMark: 100 },
-  { domain: "Research",        A: 72, fullMark: 100 },
-];
-
-// ── 5. PROJECT CATEGORY SPLIT ───────────────────────────────────
-// Used in the pie chart. Matches categories in projects.js.
-export const categoryData = [
-  { name: "AI / ML",          value: 40 },
-  { name: "Data Science",     value: 30 },
-  { name: "IoT",              value: 20 },
-  { name: "NLP",              value: 10 },
+  // ── TEMPLATE — copy this block to add a new project dashboard ─
+  // {
+  //   id: 3,
+  //   projectName: "Your Project Title",
+  //   description: "What these metrics represent",
+  //   metrics: [
+  //     { label: "Metric Name", value: "Value" },
+  //     { label: "Metric Name", value: "Value" },
+  //     { label: "Metric Name", value: "Value" },
+  //     { label: "Metric Name", value: "Value" },
+  //   ],
+  //   chartData: [
+  //     { name: "Category A", value: 80 },
+  //     { name: "Category B", value: 65 },
+  //     { name: "Category C", value: 90 },
+  //   ],
+  //   dataLabel: "Score (%)",
+  //   availableCharts: ["bar", "line", "pie", "radar"],
+  // },
 ];
