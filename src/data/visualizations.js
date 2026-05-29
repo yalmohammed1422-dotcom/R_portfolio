@@ -5,7 +5,8 @@
 // HOW TO ADD A NEW VISUALIZATION PROJECT:
 //   1. Place your images inside /public/visualizations/
 //   2. Copy the block below and add it to the array
-//   3. Reference image paths starting with "/visualizations/filename.png"
+//   3. Reference image paths WITHOUT a leading slash: "visualizations/filename.png"
+//      (The component automatically prepends the correct base URL for GitHub Pages)
 
 export const vizProjects = [
   {
@@ -15,17 +16,17 @@ export const vizProjects = [
       "A comprehensive data analysis project exploring crime patterns in Los Angeles, focusing on temporal trends, geographic hotspots, and victim demographics.",
     images: [
       {
-        src: "public/visualizations/crime_vis1.png",
+        src: "visualizations/crime_vis1.png",
         title: "Time Period Groupings",
         caption: "Early Morning, Morning, Afternoon, Evening — identifies most dangerous time of day",
       },
       {
-        src: "public/visualizations/crime_vis2.png",
+        src: "visualizations/crime_vis2.png",
         title: "Top 10 Night Crime Locations",
         caption: "Reveals areas needing enhanced lighting and security measures",
       },
       {
-        src: "public/visualizations/crime_vis3.png",
+        src: "visualizations/crime_vis3.png",
         title: "Age Distribution Histogram",
         caption: "Raw age distribution with mean/median — reveals age-specific victimization patterns",
       },
@@ -38,32 +39,32 @@ export const vizProjects = [
       "Exploring Nobel Prize winner demographics, trends, and patterns across decades, countries, categories, and gender distributions.",
     images: [
       {
-        src: "public/visualizations/nobel_vis1.png",
+        src: "visualizations/nobel_vis1.png",
         title: "Gender Distribution",
         caption: "Bar chart revealing historical gender imbalance in Nobel Prize awards",
       },
       {
-        src: "public/visualizations/nobel_vis2.png",
+        src: "visualizations/nobel_vis2.png",
         title: "Top 10 Countries",
         caption: "Shows geographic concentration of Nobel Prize winners",
       },
       {
-        src: "public/visualizations/nobel_vis3.png",
+        src: "visualizations/nobel_vis3.png",
         title: "USA vs World by Decade",
         caption: "Tracks the rise of USA scientific dominance over time",
       },
       {
-        src: "public/visualizations/nobel_vis4.png",
+        src: "visualizations/nobel_vis4.png",
         title: "Female Proportion by Decade",
         caption: "Shows progress in gender equality over time",
       },
       {
-        src: "public/visualizations/nobel_vis5.png",
+        src: "visualizations/nobel_vis5.png",
         title: "Timeline of Female Winners",
         caption: "Historical milestone markers in Nobel Prize history",
       },
       {
-        src: "public/visualizations/nobel_vis6.png",
+        src: "visualizations/nobel_vis6.png",
         title: "Repeat Winners",
         caption: "Extremely rare achievement highlighting exceptional contributions",
       },
@@ -76,12 +77,12 @@ export const vizProjects = [
       "Exploring Netflix movie data from the 1990s decade, focusing on movie durations and genre-specific characteristics.",
     images: [
       {
-        src: "public/visualizations/netfilx_vis1.png",
+        src: "visualizations/netfilx_vis1.png",
         title: "Most Common Movie Duration",
         caption: "Identifies the most frequently occurring movie duration in the 1990s",
       },
       {
-        src: "public/visualizations/netfilx_vis2.png",
+        src: "visualizations/netfilx_vis2.png",
         title: "Short Action Movies Count",
         caption: "Action movies from the 1990s with duration under 90 minutes",
       },
@@ -94,17 +95,17 @@ export const vizProjects = [
       "Comprehensive analysis of SAT performance across New York City schools, focusing on math excellence, top-performing schools, and borough-level comparisons.",
     images: [
       {
-        src: "public/visualizations/NYC_School_vis1.png",
+        src: "visualizations/NYC_School_vis1.png",
         title: "Top 10 Schools by Math Score",
         caption: "Identifies schools excelling in mathematics",
       },
       {
-        src: "public/visualizations/NYC_School_vis2.png",
+        src: "visualizations/NYC_School_vis2.png",
         title: "Component Breakdown — Top 3 Schools",
         caption: "Identify overall top-performing schools across all SAT components",
       },
       {
-        src: "public/visualizations/NYC_School_vis3.png",
+        src: "visualizations/NYC_School_vis3.png",
         title: "4-Panel Borough Comparison",
         caption: "Average, std dev, count, and scatter — identifies most inconsistent SAT borough",
       },
@@ -117,7 +118,7 @@ export const vizProjects = [
   //   description: "Short description of what this analysis covers.",
   //   images: [
   //     {
-  //       src: "/visualizations/your_image.png",
+  //       src: "visualizations/your_image.png",   // no leading slash!
   //       title: "Chart Title",
   //       caption: "What this chart shows",
   //     },
