@@ -33,6 +33,6 @@ export const personalInfo = {
 //   4. Go to "Account" → "API Keys" → copy your Public Key below
 //   5. Save this file — the contact form will work immediately!
 
-export const EMAILJS_SERVICE_ID  = "YOUR_SERVICE_ID";   // e.g. "service_abc123"
-export const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID";  // e.g. "template_xyz789"
-export const EMAILJS_PUBLIC_KEY  = "YOUR_PUBLIC_KEY";   // e.g. "aBcDeFgHiJkLmNo"
+export const EMAILJS_SERVICE_ID  = "service_qdzg0lj";   // e.g. "service_abc123"
+export const EMAILJS_TEMPLATE_ID = "template_jinlfdd";  // e.g. "template_xyz789"
+export const EMAILJS_PUBLIC_KEY  = "E8DA-3aDTfE8iOw6Z";   // e.g. "aBcDeFgHiJkLmNo"
